@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 html {
-  color: #6a7187;
+  color: #2c3424;
   // background: rgba(44, 52, 36, 0.1);
   background: rgb(255, 255, 255);
 }
@@ -65,7 +65,7 @@ h6 {
 .uk-section-secondary:not(.uk-preserve-color) .uk-close,
 .uk-tile-primary:not(.uk-preserve-color) .uk-close,
 .uk-tile-secondary:not(.uk-preserve-color) .uk-close {
-  color: #495662;
+  color: #2c3424;
 }
 
 .uk-navbar-nav > li > a,
@@ -77,4 +77,26 @@ h6 {
 
 .uk-padding-medium {
   padding: 42px;
+}
+
+.rg-text-large {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.rg-text-xlarge {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+.light-card-header,
+.light-card-header .uk-card-title {
+  color: #2c3424;
+  background-color: #daded8;
+  margin-bottom: 5px;
+}
+
+.light-card-body {
+  color: #2c3424;
+  background-color: #f3f0e8;
 }
