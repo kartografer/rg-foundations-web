@@ -6,6 +6,8 @@ html {
   background: rgb(255, 255, 255);
 }
 
+/* UI KIT Overrides */
+
 .uk-link,
 a {
   color: #768064;
@@ -41,7 +43,6 @@ h6 {
 .uk-card-default .uk-card-title,
 .uk-card-default {
   color: #daded8;
-  background-color: #768064;
 }
 
 .uk-text-lead {
@@ -79,6 +80,12 @@ h6 {
   padding: 42px;
 }
 
+.uk-border-rounded {
+  border-radius: 10px;
+}
+
+/* Global Styles */
+
 .rg-text-large {
   font-size: 1.5rem;
   line-height: 1;
@@ -99,4 +106,16 @@ h6 {
 .light-card-body {
   color: #2c3424;
   background-color: #f3f0e8;
+}
+
+.dark-card-header,
+.dark-card-header .uk-card-title {
+  color: #f3f0e8;
+  background-color: #495662;
+  margin-bottom: 5px;
+}
+
+.dark-card-body {
+  color: #2c3424;
+  background-color: #daded8;
 }
