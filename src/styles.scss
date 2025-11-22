@@ -2,13 +2,13 @@
 
 html {
   color: #6a7187;
-  // background: rgba(236, 209, 206, 0.1);
-  background: rgba(201, 214, 213, 0.1);
+  // background: rgba(44, 52, 36, 0.1);
+  background: rgb(255, 255, 255);
 }
 
 .uk-link,
 a {
-  color: #c99190;
+  color: #768064;
 }
 
 .uk-link-toggle:focus .uk-link,
@@ -35,21 +35,23 @@ h3,
 h4,
 h5,
 h6 {
-  color: #6a7187;
+  color: #495662;
 }
 
 .uk-card-default .uk-card-title,
 .uk-card-default {
-  color: #6a7187;
+  color: #daded8;
+  background-color: #768064;
 }
 
 .uk-text-lead {
-  color: #6a7187;
+  color: #495662;
 }
 
 .uk-offcanvas-bar .uk-nav-default > li > a,
-.uk-offcanvas-bar[_ngcontent-mvw-c16] a[_ngcontent-mvw-c16] {
-  color: #6a7187;
+.uk-offcanvas-bar[_ngcontent-mvw-c16] a[_ngcontent-mvw-c16],
+.uk-text-meta {
+  color: #f3f0e8;
 }
 
 .uk-card-primary.uk-card-body .uk-close,
@@ -63,14 +65,14 @@ h6 {
 .uk-section-secondary:not(.uk-preserve-color) .uk-close,
 .uk-tile-primary:not(.uk-preserve-color) .uk-close,
 .uk-tile-secondary:not(.uk-preserve-color) .uk-close {
-  color: #6a7187;
+  color: #495662;
 }
 
 .uk-navbar-nav > li > a,
 .uk-navbar-nav > li:hover > a,
 .uk-navbar-nav > li > a.uk-open,
 .uk-navbar-nav > li > a:focus {
-  color: #6a7187;
+  color: #daded8;
 }
 
 .uk-padding-medium {

@@ -50,6 +50,6 @@ jobs:
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_MAVENINBEHAVIOR_6C5A6 }}'
-          projectId: maveninbehavior-6c5a6
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_rgfoundations }}'
+          projectId: rgfoundations
           channelId: live

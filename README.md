@@ -1,4 +1,4 @@
-# Maven in Behavior website
+# RG Foundations Website
 
 ## Angular Getting Started
 

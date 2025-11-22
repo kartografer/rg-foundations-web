@@ -1,12 +1,12 @@
 export const environment = {
   firebase: {
-    projectId: 'maveninbehavior-6c5a6',
-    appId: '1:800275068901:web:db1ca841443ae97e26610c',
-    storageBucket: 'maveninbehavior-6c5a6.appspot.com',
-    apiKey: 'AIzaSyAirsIMqd4Hqk32QF36Z9RDeL-r3RecUKI',
-    authDomain: 'maveninbehavior-6c5a6.firebaseapp.com',
-    messagingSenderId: '800275068901',
-    measurementId: 'G-2BDQQXLX4K',
+    apiKey: 'AIzaSyCAj3Cu4wZuKQbWuGzQmWvj11oS9324omw',
+    authDomain: 'rgfoundations.firebaseapp.com',
+    projectId: 'rgfoundations',
+    storageBucket: 'rgfoundations.firebasestorage.app',
+    messagingSenderId: '194429249947',
+    appId: '1:194429249947:web:6a6eb034140cd6302a193e',
+    measurementId: 'G-78X6TM7B69',
   },
   production: true,
 }

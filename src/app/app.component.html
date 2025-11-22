@@ -5,18 +5,34 @@
       uk-navbar
     >
       <div class="uk-navbar-center">
-        <a href="" class="uk-navbar-item uk-logo"
-          ><img
-            data-src="assets/img/mib-logo.svg"
-            width="200px"
-            height="200px"
-            uk-img
-        /></a>
+        <div class="uk-navbar-item uk-logo uk-padding-small">
+          <svg width="150" height="150" viewBox="0 0 150 150">
+            <defs>
+              <mask id="circle-mask">
+                <rect width="150" height="150" fill="black" />
+                <circle cx="75" cy="75" r="75" fill="white" />
+              </mask>
+            </defs>
+            <g mask="url(#circle-mask)">
+              <!-- 
+                Adjust x, y, width, height, and transform to zoom and center as needed.
+                Increase width+height for zoom-in; use x/y to offset.
+              -->
+              <image
+                href="assets/img/rgfoundationslogo.svg"
+                x="-75"
+                y="-75"
+                width="300"
+                height="300"
+              />
+            </g>
+          </svg>
+        </div>
         <div class="uk-navbar-right navbar">
           <ul class="uk-navbar-nav">
             <li class="uk-parent"><a href="#about">About</a></li>
-            <li class="uk-parent"><a href="#services">Services</a></li>
-            <li class="uk-parent"><a href="#insurances">Insurances</a></li>
+            <li class="uk-parent"><a href="#admissions">Admissions</a></li>
+            <li class="uk-parent"><a href="#academics">Academics</a></li>
             <li class="uk-parent"><a href="#team">Team</a></li>
             <li class="uk-parent"><a href="#contact">Contact</a></li>
           </ul>
@@ -36,8 +52,8 @@
         <button class="uk-offcanvas-close" type="button" uk-close></button>
         <ul class="uk-nav uk-nav-default">
           <li class="uk-parent"><a href="#about">About</a></li>
-          <li class="uk-parent"><a href="#services">Services</a></li>
-          <li class="uk-parent"><a href="#insurances">Insurances</a></li>
+          <li class="uk-parent"><a href="#admissions">admissions</a></li>
+          <li class="uk-parent"><a href="#academics">Academics</a></li>
           <li class="uk-parent"><a href="#team">Team</a></li>
           <li class="uk-parent"><a href="#contact">Contact</a></li>
         </ul>
@@ -61,46 +77,55 @@
 
 <div class="uk-section uk-container-expand">
   <div class="uk-container uk-container-expand" id="about">
-    <h1 class="uk-heading-medium">Maven in Behavior</h1>
+    <h1 class="uk-heading-medium">RG Foundations</h1>
     <div class="uk-panel">
       <article class="uk-article">
         <p>
-          Maven in Behavior is a BCBA-founded and owned company providing high
-          quality Applied Behavior Analysis (ABA) therapy. Maven in Behavior is
-          center-based and we work with children and adolescents diagnosed with
-          Autism as well as individuals exhibiting maladaptive behaviors and
-          social deficits. At Maven in Behavior, we strive to provide high
-          quality therapy by using evidence-based approaches and interventions.
+          Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque
+          faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi
+          pretium tellus duis convallis. Tempus leo eu aenean sed diam urna
+          tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas.
+          Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut
+          hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent
+          per conubia nostra inceptos himenaeos.
         </p>
         <p>
-          Maven in Behavior offers a variety of services at our therapy center.
-          We offer 1:1 ABA therapy, parent training and consultations, school
-          consultations, potty training, as well as treating picky eating and
-          food refusal. Home and school visits may be available, upon request.
+          Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque
+          faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi
+          pretium tellus duis convallis. Tempus leo eu aenean sed diam urna
+          tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas.
+          Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut
+          hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent
+          per conubia nostra inceptos himenaeos.
         </p>
         <p>
-          Maven in Behavior works with several insurance companies, please
-          contact us to verify if we are in network with your plan.
+          Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque
+          faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi
+          pretium tellus duis convallis. Tempus leo eu aenean sed diam urna
+          tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas.
+          Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut
+          hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent
+          per conubia nostra inceptos himenaeos.
         </p>
       </article>
-    </div>
-    <div class="uk-panel uk-padding-large uk-padding-remove-bottom">
-      <p class="uk-text-center uk-text-bold uk-text-lead">
-        To schedule a free 30 minute phone consultation, please call
-        <a href="tel:305-586-2953">(305) 586-2953</a> or email
-        <a href="mailto:info@maveninbehavior.com">Maven In Behavior Inc.</a>
-      </p>
     </div>
   </div>
 
   <div
     class="uk-container uk-container-expand uk-margin-xlarge-top"
-    id="services"
+    id="admissions"
   >
-    <h1 class="uk-heading-medium">Services</h1>
+    <h1 class="uk-heading-medium">Admissions</h1>
+  </div>
+
+  <div
+    class="uk-container uk-container-expand uk-margin-xlarge-top"
+    id="academics"
+  >
+    <h1 class="uk-heading-medium">Academics</h1>
     <div class="uk-child-width-1-2@s uk-padding-medium" uk-grid>
       <div>
-        <div class="uk-card uk-card-default uk-width-1-1@m">
+        <div class="uk-card uk-card-default uk-border-rounded uk-width-1-1@m">
           <div class="uk-card-header">
             <div class="uk-grid-small uk-flex-middle" uk-grid>
               <!-- <div class="uk-width-auto">
@@ -131,7 +156,7 @@
         </div>
       </div>
       <div>
-        <div class="uk-card uk-card-default uk-width-1-1@m">
+        <div class="uk-card uk-card-default uk-border-rounded uk-width-1-1@m">
           <div class="uk-card-header">
             <div class="uk-grid-small uk-flex-middle" uk-grid>
               <!-- <div class="uk-width-auto">
@@ -160,135 +185,6 @@
           </div>
         </div>
       </div>
-      <div>
-        <div class="uk-card uk-card-default uk-width-1-1@m">
-          <div class="uk-card-header">
-            <div class="uk-grid-small uk-flex-middle" uk-grid>
-              <div class="uk-width-expand">
-                <h3 class="uk-card-title uk-margin-remove-bottom">
-                  Parent Training and Consultations
-                </h3>
-              </div>
-            </div>
-          </div>
-          <div class="uk-card-body">
-            <p>
-              Trainings are always provided alongside with your child’s
-              individualized intervention plan. Maven in Behavior provides
-              trainings and consultations aimed to help parents better
-              understand their child’s programming and successfully generalize
-              acquired skills to their child’s day to day life.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div class="uk-card uk-card-default uk-width-1-1@m">
-          <div class="uk-card-header">
-            <div class="uk-grid-small uk-flex-middle" uk-grid>
-              <div class="uk-width-expand">
-                <h3 class="uk-card-title uk-margin-remove-bottom">
-                  School Consultations
-                </h3>
-              </div>
-            </div>
-          </div>
-          <div class="uk-card-body">
-            <p>
-              School consultations include teacher and staff trainings as it
-              relates to Applied Behavior Analysis. Maven in Behavior also
-              offers classroom behavior supports to help improve classroom
-              management strategies.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div class="uk-card uk-card-default uk-width-1-1@m">
-          <div class="uk-card-header">
-            <div class="uk-grid-small uk-flex-middle" uk-grid>
-              <div class="uk-width-expand">
-                <h3 class="uk-card-title uk-margin-remove-bottom">
-                  Potty Training
-                </h3>
-              </div>
-            </div>
-          </div>
-          <div class="uk-card-body">
-            <p>
-              Potty training is a necessary life skill and critical for
-              independent living. Maven in Behavior uses an ABA based and
-              individualized protocol to teach the skills necessary to
-              successfully use a bathroom independently.
-            </p>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div class="uk-card uk-card-default uk-width-1-1@m">
-          <div class="uk-card-header">
-            <div class="uk-grid-small uk-flex-middle" uk-grid>
-              <div class="uk-width-expand">
-                <h3 class="uk-card-title uk-margin-remove-bottom">
-                  Picky Eating & Food Refusal
-                </h3>
-              </div>
-            </div>
-          </div>
-          <div class="uk-card-body">
-            <p>
-              Picky eating and food refusal are commonly seen amongst children
-              today. Maven in Behavior uses a behavioral approach to target
-              individualized goals such as decreasing food refusal behaviors and
-              increasing variety in diet. To intervene successfully, it is
-              important that all medical causes for food refusal or evaluated
-              prior to treatment.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div
-    class="uk-container uk-container-expand uk-margin-xlarge-top"
-    id="insurances"
-  >
-    <h1 class="uk-heading-medium">Insurances</h1>
-    <div
-      class="
-        uk-text-center
-        uk-grid-small
-        uk-grid-column-small
-        uk-grid-row-large
-        uk-child-width-1-3@s
-        uk-grid-match
-        uk-padding-medium
-      "
-      uk-grid
-    >
-      <div>
-        <div class="uk-card uk-card-default uk-card-body">Cigna</div>
-      </div>
-      <div>
-        <div class="uk-card uk-card-default uk-card-body">Aetna</div>
-      </div>
-      <div>
-        <div class="uk-card uk-card-default uk-card-body">Florida Blue</div>
-      </div>
-      <div>
-        <div class="uk-card uk-card-default uk-card-body">Magellan</div>
-      </div>
-      <div>
-        <div class="uk-card uk-card-default uk-card-body">
-          Family Empowerment Scholarship
-        </div>
-      </div>
-      <div>
-        <div class="uk-card uk-card-default uk-card-body">
-          Private Pay Accepted!
-        </div>
-      </div>
     </div>
   </div>
 </div>
@@ -297,7 +193,7 @@
   <h1 class="uk-heading-medium">Team</h1>
   <div class="uk-child-width-1-2@s uk-padding-medium" uk-grid>
     <div>
-      <div class="uk-card uk-card-default uk-width-1-1@m">
+      <div class="uk-card uk-card-default uk-border-rounded uk-width-1-1@m">
         <div class="uk-card-header">
           <div class="uk-grid-small uk-flex-middle" uk-grid>
             <div class="uk-width-auto">
@@ -306,12 +202,12 @@
                 width="175"
                 height="175"
                 src="assets/img/alana.jpg"
-                alt="Alana Usategui Guilarte, M.S.,BCBA, Owner and Founder"
+                alt="Alana Usategui Guilarte, Owner and Founder"
               />
             </div>
             <div class="uk-width-expand">
               <h2 class="uk-card-title uk-margin-remove-bottom">Alana</h2>
-              Usategui Guilarte, M.S.,BCBA, Owner and Founder
+              Usategui Guilarte
               <p class="uk-text-meta">Owner & Founder</p>
             </div>
           </div>
@@ -345,7 +241,7 @@
       </div>
     </div>
     <div>
-      <div class="uk-card uk-card-default uk-width-1-1@m">
+      <div class="uk-card uk-card-default uk-border-rounded uk-width-1-1@m">
         <div class="uk-card-header">
           <div class="uk-grid-small uk-flex-middle" uk-grid>
             <div class="uk-width-auto">
@@ -354,12 +250,13 @@
                 width="175"
                 height="175"
                 src="assets/img/christina.jpg"
-                alt="Christina Rodriguez, M.S.,BCBA, Clinical Director"
+                alt="Christina Rodriguez, Owner and Founder"
               />
             </div>
             <div class="uk-width-expand">
               <h2 class="uk-card-title uk-margin-remove-bottom">Christina</h2>
-              Rodriguez, M.S.,BCBA, Clinical Director
+              Rodriguez
+              <p class="uk-text-meta">Owner & Founder</p>
             </div>
           </div>
         </div>
@@ -379,209 +276,42 @@
         </div>
       </div>
     </div>
-    <div>
-      <div class="uk-card uk-card-default uk-width-1-1@m">
-        <div class="uk-card-header">
-          <div class="uk-grid-small uk-flex-middle" uk-grid>
-            <div class="uk-width-auto">
-              <img
-                class="uk-border-circle"
-                width="175"
-                height="175"
-                src="assets/img/sury.jpg"
-                alt="Sury Maria Boutros Arias, RBT"
-              />
-            </div>
-            <div class="uk-width-expand">
-              <h2 class="uk-card-title uk-margin-remove-bottom">Sury</h2>
-              Maria Boutros Arias, RBT
-            </div>
-          </div>
-        </div>
-        <div class="uk-card-body">
-          <p>
-            Sury, originally from Camagüey, Cuba, has dedicated her career to
-            supporting children with special needs. Her passion for this field
-            emerged early in life, guiding her to pursue a bachelor's degree in
-            Special Education from the University of Camagüey, where she
-            graduated with honors.
-          </p>
-          <p>
-            During her university years, Sury was actively involved in
-            initiatives to raise awareness about autism, most notably leading
-            the "Esperanza Azul" project in 2014. She also gained practical
-            experience by working part-time at a school for children with autism
-            during her final two years of college.
-          </p>
-          <p>
-            In 2017, Sury relocated to the United States, and by 2019, she had
-            achieved certification as a Registered Behavior Technician (RBT).
-            Over the past five years, she has worked with numerous clients,
-            continually enhancing her skills and commitment to her profession.
-            In March 2022, Sury joined the Maven in Behavior team, where she
-            continues to apply her expertise and passion for helping children
-            with special needs.
-          </p>
-        </div>
-      </div>
-    </div>
-    <div>
-      <div class="uk-card uk-card-default uk-width-1-1@m">
-        <div class="uk-card-header">
-          <div class="uk-grid-small uk-flex-middle" uk-grid>
-            <div class="uk-width-auto">
-              <img
-                class="uk-border-circle"
-                width="175"
-                height="175"
-                src="assets/img/gabriella.jpg"
-                alt="Gabriella Herrera, RBT"
-              />
-            </div>
-            <div class="uk-width-expand">
-              <h2 class="uk-card-title uk-margin-remove-bottom">Gabriella</h2>
-              Herrera, RBT
-            </div>
-          </div>
-        </div>
-        <div class="uk-card-body">
-          <p>
-            Gabriella has been a dedicated Registered Behavior Technician since
-            2020. She is currently pursuing her Bachelor’s degree in Behavior
-            Analysis at Florida International University, where she is expanding
-            her expertise in Applied Behavior Analysis. Gabriella is passionate
-            about using evidence-based practices to make a positive impact on
-            the lives of individuals with developmental disabilities. She finds
-            great joy in working with children, celebrating their unique
-            strengths, and helping them achieve their fullest potential.
-            Gabriella is inspired every day by their resilience and progress and
-            feels incredibly fortunate to go to work each day to see their
-            smiling faces and make a difference in their lives.
-          </p>
-        </div>
-      </div>
-    </div>
-    <div>
-      <div class="uk-card uk-card-default uk-width-1-1@m">
-        <div class="uk-card-header">
-          <div class="uk-grid-small uk-flex-middle" uk-grid>
-            <div class="uk-width-auto">
-              <img
-                class="uk-border-circle"
-                width="175"
-                height="175"
-                src="assets/img/gabriela.jpg"
-                alt="Gabriela Villena, RBT"
-              />
-            </div>
-            <div class="uk-width-expand">
-              <h2 class="uk-card-title uk-margin-remove-bottom">Gabriela</h2>
-              Villena, RBT
-            </div>
-          </div>
-        </div>
-        <div class="uk-card-body">
-          <p>
-            Gabriela Villena is a Registered Behavior Technician at Maven in
-            Behavior. She has graduated from Florida International University,
-            with a bachelor's degree in early childhood education. Currently,
-            she is in graduate school studying to become a BCBA. Before Gabriela
-            joined the Maven in Behavior team in December of 2023, she worked as
-            a preschool teacher/assistant. She is passionate about making a
-            difference in each child's life. Working and building positive
-            relationships with her clients brings her fulfillment and joy.
-          </p>
-        </div>
-      </div>
-    </div>
-    <div>
-      <div class="uk-card uk-card-default uk-width-1-1@m">
-        <div class="uk-card-header">
-          <div class="uk-grid-small uk-flex-middle" uk-grid>
-            <div class="uk-width-auto">
-              <img
-                class="uk-border-circle"
-                width="175"
-                height="175"
-                src="assets/img/lya.jpg"
-                alt="Lya Lauture, RBT"
-              />
-            </div>
-            <div class="uk-width-expand">
-              <h2 class="uk-card-title uk-margin-remove-bottom">Lya</h2>
-              Lauture, RBT
-            </div>
-          </div>
-        </div>
-        <div class="uk-card-body">
-          <p>
-            Lya is an RBT here at Maven in Behavior. She is continuing her
-            education to obtain her master’s in applied behavior analysis to
-            gain her BCBA certification. Her enthusiasm for watching children
-            learn and thrive drives her commitment to providing compassionate
-            and effective support in every session.
-          </p>
-        </div>
-      </div>
-    </div>
-    <div>
-      <div class="uk-card uk-card-default uk-width-1-1@m">
-        <div class="uk-card-header">
-          <div class="uk-grid-small uk-flex-middle" uk-grid>
-            <div class="uk-width-auto">
-              <img
-                class="uk-border-circle"
-                width="175"
-                height="175"
-                src="assets/img/paola.jpg"
-                alt="Paola Guareschi, RBT"
-              />
-            </div>
-            <div class="uk-width-expand">
-              <h2 class="uk-card-title uk-margin-remove-bottom">Paola</h2>
-              Guareschi, RBT
-            </div>
-          </div>
-        </div>
-        <div class="uk-card-body">
-          <p>
-            Paola is a dedicated professional in the field of Applied Behavior
-            Analysis (ABA), with a robust academic background and hands-on
-            experience. Originally from Venezuela, Paola earned her Master’s
-            degree in ABA from the University of Miami. Since entering the field
-            in 2021, she has been committed to applying her expertise to improve
-            the lives of those she serves. Her work is driven by a passion for
-            behavioral science and a deep-seated desire to make a positive
-            impact in her community.
-          </p>
-        </div>
-      </div>
-    </div>
   </div>
 </div>
 
 <div class="uk-section">
   <div class="uk-container footer" id="contact">
     <footer class="uk-text-center">
-      <div>
-        <img
-          data-src="assets/img/mib-logo.svg"
-          width="350px"
-          heigh="350px"
-          uk-img
-        />
-      </div>
+      <svg width="150" height="150" viewBox="0 0 150 150">
+        <defs>
+          <mask id="circle-mask">
+            <rect width="150" height="150" fill="black" />
+            <circle cx="75" cy="75" r="75" fill="white" />
+          </mask>
+        </defs>
+        <g mask="url(#circle-mask)">
+          <!-- 
+            Adjust x, y, width, height, and transform to zoom and center as needed.
+            Increase width+height for zoom-in; use x/y to offset.
+          -->
+          <image
+            href="assets/img/rgfoundationslogo.svg"
+            x="-75"
+            y="-75"
+            width="300"
+            height="300"
+          />
+        </g>
+      </svg>
       <address>
         <p>
           <i class="fas fa-envelope-open-text"></i>
           Email:
-          <a class="uk-padding-small" href="mailto:info@maveninbehavior.com"
-            >info@maveninbehavior.com</a
-          >
+          <a href="mailto:info@maveninbehavior.com">info@maveninbehavior.com</a>
           <br />
           <i class="fas fa-phone"></i>
           Phone:
-          <a class="uk-padding-small" href="tel:305-586-2953">(305) 586-2953</a>
+          <a href="tel:305-586-2953">(305) 586-2953</a>
         </p>
         <p>
           <a
@@ -593,7 +323,7 @@
         </p>
         <p>
           <i class="fas fa-copyright"></i>
-          Maven In Behavior Inc.
+          RG Foundations LLC
         </p>
       </address>
     </footer>
