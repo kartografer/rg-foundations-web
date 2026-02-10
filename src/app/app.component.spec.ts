@@ -10,7 +10,7 @@ describe('AppComponent', () => {
     }).compileComponents()
   }))
 
-  const TITLE = 'RF Foundations'
+  const TITLE = 'RG Foundations'
 
   it('should create the app', () => {
     const fixture = TestBed.createComponent(AppComponent)
