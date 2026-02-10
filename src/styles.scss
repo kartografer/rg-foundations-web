@@ -82,6 +82,10 @@ h6 {
   text-transform: none;
 }
 
+.uk-border-rounded {
+  border-radius: 10px;
+}
+
 .uk-button {
   text-transform: none;
 }
@@ -102,8 +106,9 @@ h6 {
   padding: 42px;
 }
 
-.uk-border-rounded {
-  border-radius: 10px;
+.uk-table-hover tbody tr:hover,
+.uk-table-hover > tr:hover {
+  background-color: #f3f0e8;
 }
 
 /* Global Styles */
