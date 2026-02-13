@@ -44,3 +44,18 @@
     min-height: 800px;
   }
 }
+
+@media screen and (max-width: 1199px) {
+  #team {
+    .dark-card-header {
+      .uk-grid-small {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .uk-width-expand {
+        text-align: center;
+      }
+    }
+  }
+}
