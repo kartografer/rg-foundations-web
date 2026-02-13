@@ -26,10 +26,22 @@
   }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 450px) {
   .navbar-mobile {
     margin-left: 10%;
     top: inherit;
+  }
+
+  // Reduce table font size to prevent cost column misalignment
+  #admissions {
+    .uk-table {
+      font-size: 0.875rem;
+
+      th,
+      td {
+        padding: 8px 6px;
+      }
+    }
   }
 }
 
