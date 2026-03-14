@@ -12,7 +12,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-24.04
-
     strategy:
       matrix:
         node-version: [24.x]
@@ -31,7 +30,7 @@ jobs:
       - name: test
         run: npm test
   deploy_live_website:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     if: contains(github.ref, 'main')
     needs: build
     steps:
