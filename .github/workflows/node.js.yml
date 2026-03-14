@@ -11,11 +11,10 @@ on:
 
 env:
   NODE_VERSION: '24.x'
-  UBUNTU_VERSION: 'ubuntu-24.04'
 
 jobs:
   build:
-    runs-on: ${{ env.UBUNTU_VERSION }}
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       - name: Use Node.js ${{ env.NODE_VERSION }}
@@ -30,7 +29,7 @@ jobs:
       - name: test
         run: npm test
   deploy_live_website:
-    runs-on: ${{ env.UBUNTU_VERSION }}
+    runs-on: ubuntu-24.04
     if: contains(github.ref, 'main')
     needs: build
     steps:
