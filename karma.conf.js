@@ -15,6 +15,8 @@ module.exports = function (config) {
           '--disable-gpu',
           '--disable-translate',
           '--disable-extensions',
+          '--disable-dev-shm-usage',
+          '--disable-software-rasterizer',
         ],
       },
     },
@@ -25,7 +27,6 @@ module.exports = function (config) {
       require('karma-chrome-launcher'),
       require('karma-jasmine-html-reporter'),
       require('karma-coverage'),
-      require('@angular-devkit/build-angular/plugins/karma'),
     ],
     client: {
       clearContext: false, // leave Jasmine Spec Runner output visible in browser

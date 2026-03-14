@@ -43,13 +43,23 @@
             uk-navbar-toggle-icon
             uk-toggle
             href="#offcanvas-slide"
-          ></a>
+            aria-label="Toggle navigation menu"
+          >
+            <span class="uk-hidden">Menu</span>
+          </a>
         </div>
       </div>
     </nav>
     <div id="offcanvas-slide" uk-offcanvas>
       <div class="uk-offcanvas-bar">
-        <button class="uk-offcanvas-close" type="button" uk-close></button>
+        <button
+          class="uk-offcanvas-close"
+          type="button"
+          uk-close
+          aria-label="Close menu"
+        >
+          <span class="uk-hidden">Close</span>
+        </button>
         <ul class="uk-nav uk-nav-default">
           <li class="uk-parent"><a href="#about">About</a></li>
           <li class="uk-parent"><a href="#academics">Academics</a></li>
