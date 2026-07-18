@@ -1,5 +1,5 @@
 // Friends of RG Component Styles
-// Using existing RG Foundations color palette
+// Using RG Foundations color palette and card patterns
 
 $primary-color: #2c3424;
 $accent-dark: #495662;
@@ -8,51 +8,43 @@ $light-bg: #f3f0e8;
 $light-border: #daded8;
 $text-light: #f3f0e8;
 
+/* Page Navbar */
+.page-navbar {
+  background: rgba(44, 52, 36, 0.9);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+  color: $light-border;
+
+  &:hover {
+    color: $light-bg;
+  }
+}
+
 /* Hero Section */
 .donation-hero {
   padding-top: 120px;
-  min-height: 550px;
+  min-height: 500px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: $text-light;
-  position: relative;
-  overflow: hidden;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(
-      circle at 20% 50%,
-      rgba(255, 255, 255, 0.1) 0%,
-      transparent 50%
-    );
-    pointer-events: none;
-  }
-
-  > * {
-    position: relative;
-    z-index: 1;
-  }
+  background: linear-gradient(135deg, $primary-color 0%, $accent-dark 100%);
 
   @media (max-width: 768px) {
-    padding-top: 100px;
-    min-height: 400px;
+    padding-top: 80px;
+    min-height: 350px;
   }
 }
 
 .donation-hero-title {
   font-family: 'Playfair Display', serif;
-  font-size: 3.8rem;
+  font-size: 3.5rem;
   font-weight: 700;
   color: $text-light;
   margin: 0 0 1rem 0;
-  letter-spacing: -0.5px;
-  text-wrap: balance;
+  line-height: 1.2;
 
   @media (max-width: 768px) {
     font-size: 2.5rem;
@@ -64,315 +56,207 @@ $text-light: #f3f0e8;
 }
 
 .donation-hero-subtitle {
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   color: $light-bg;
   margin: 0 0 1.5rem 0;
   font-weight: 400;
-  letter-spacing: 0.5px;
 
   @media (max-width: 768px) {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
 }
 
 .donation-hero-description {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: $light-bg;
-  max-width: 650px;
+  max-width: 600px;
   margin: 0 auto;
-  line-height: 1.9;
-  letter-spacing: 0.3px;
-
-  @media (max-width: 768px) {
-    font-size: 1rem;
-  }
+  line-height: 1.8;
 }
 
 /* Donation CTA Section */
 .donation-cta-section {
-  background: linear-gradient(to bottom, #fff 0%, $light-bg 100%);
-  padding: 70px 0;
+  background-color: #fff;
+  padding: 60px 0;
 
   @media (max-width: 768px) {
-    padding: 50px 0;
+    padding: 40px 0;
   }
 }
 
 .donation-cta-panel {
-  background-color: #fff;
-  border: 2px solid $light-border;
-  border-top: 6px solid $primary-color;
-  padding: 50px 40px;
+  background-color: $light-bg;
+  border-left: 5px solid $primary-color;
+  padding: 40px;
   text-align: center;
-  border-radius: 2px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease;
-
-  &:hover {
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-  }
 
   @media (max-width: 768px) {
-    padding: 40px 30px;
+    padding: 30px 20px;
   }
 }
 
 .donation-cta-title {
   font-family: 'Playfair Display', serif;
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   font-weight: 700;
   color: $primary-color;
-  margin-bottom: 1.2rem;
-  letter-spacing: -0.3px;
-  text-wrap: balance;
+  margin-bottom: 1rem;
 
   @media (max-width: 768px) {
-    font-size: 2.2rem;
-  }
-
-  @media (max-width: 480px) {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 }
 
 .donation-cta-text {
-  font-size: 1.05rem;
-  color: #555;
-  max-width: 650px;
-  margin: 0 auto 2.5rem;
-  line-height: 1.9;
-  letter-spacing: 0.2px;
-
-  @media (max-width: 768px) {
-    font-size: 1rem;
-    margin-bottom: 2rem;
-  }
+  font-size: 1rem;
+  color: #333;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  line-height: 1.8;
 }
 
 .donation-button {
-  background-color: $primary-color !important;
-  border-color: $primary-color !important;
-  color: $text-light !important;
-  padding: 16px 50px;
-  font-size: 1.05rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  background-color: #6a7187 !important;
+  border-color: #6a7187 !important;
+  color: #fff !important;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: none;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(44, 52, 36, 0.2);
-  border-radius: 2px;
-  position: relative;
-  overflow: hidden;
 
-  &::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.3);
-    transform: translate(-50%, -50%);
-    transition: width 0.6s, height 0.6s;
-  }
-
-  &:hover {
-    background-color: $accent-dark !important;
-    border-color: $accent-dark !important;
-    box-shadow: 0 6px 16px rgba(44, 52, 36, 0.3);
-    transform: translateY(-2px);
-
-    &::before {
-      width: 300px;
-      height: 300px;
-    }
-  }
-
-  &:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 8px rgba(44, 52, 36, 0.2);
+  &:hover,
+  &:focus {
+    background-color: $primary-color !important;
+    border-color: $primary-color !important;
   }
 }
 
 /* Mission/Vision/Values Section */
 .mission-card {
   background-color: $light-bg;
-  border: 2px solid $light-border;
-  border-left: 5px solid $accent-dark;
-  padding: 35px;
-  border-radius: 2px;
-  transition: all 0.3s ease;
+  border: none;
+  padding: 30px;
   height: 100%;
   display: flex;
   flex-direction: column;
 
-  &:hover {
-    border-left-color: $primary-color;
-    box-shadow: 0 2px 8px rgba(44, 52, 36, 0.1);
-  }
-
   h3 {
     font-family: 'Playfair Display', serif;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 700;
-    color: $primary-color;
-    margin-bottom: 1.5rem;
+    color: $accent-dark;
+    margin-bottom: 1rem;
   }
 
   p {
     font-size: 0.95rem;
     line-height: 1.8;
-    color: #333;
+    color: #2c3424;
     margin: 0;
     flex-grow: 1;
   }
 
   @media (max-width: 768px) {
-    padding: 25px;
+    padding: 20px;
   }
 }
 
 .value-card {
   background-color: $light-bg;
-  border: 2px solid $light-border;
-  padding: 35px 25px;
+  border: none;
+  padding: 30px;
   text-align: center;
-  border-radius: 2px;
-  transition: all 0.3s ease;
   height: 100%;
   display: flex;
   flex-direction: column;
-  position: relative;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 4px;
-    background-color: $accent-dark;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.3s ease;
-  }
+  transition: all 0.3s ease;
 
   &:hover {
-    border-color: $accent-dark;
-    box-shadow: 0 4px 12px rgba(44, 52, 36, 0.15);
-    transform: translateY(-2px);
-
-    &::before {
-      transform: scaleX(1);
-    }
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
 
   .value-icon {
-    font-size: 3.5rem;
-    color: $primary-color;
-    margin-bottom: 1.5rem;
-    transition: all 0.3s ease;
+    font-size: 2.5rem;
+    color: $accent-dark;
+    margin-bottom: 1rem;
 
     i {
       width: 100%;
-      display: inline-block;
     }
-  }
-
-  &:hover .value-icon {
-    color: $accent-dark;
-    font-size: 3.8rem;
   }
 
   h4 {
     font-family: 'Playfair Display', serif;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 700;
     color: $primary-color;
-    margin: 0 0 1rem 0;
-    transition: color 0.3s ease;
-  }
-
-  &:hover h4 {
-    color: $accent-dark;
+    margin: 0.5rem 0;
   }
 
   p {
     font-size: 0.9rem;
-    line-height: 1.7;
-    color: #555;
+    line-height: 1.6;
+    color: #2c3424;
     margin: 0;
     flex-grow: 1;
   }
 
   @media (max-width: 768px) {
-    padding: 25px 20px;
+    padding: 20px;
   }
 }
 
 /* Board Members Section */
-.uk-background-secondary {
-  background-color: #fafafa;
-}
-
 .board-member-card {
-  background-color: #fff;
-  border: 2px solid $light-border;
-  border-left: 5px solid $primary-color;
-  padding: 30px;
-  border-radius: 2px;
+  background-color: $light-bg;
+  border: none;
+  padding: 20px;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  height: 100%;
   transition: all 0.3s ease;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
 
   &:hover {
-    border-left-color: $accent-dark;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
-    transform: translateY(-2px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   }
 
   @media (max-width: 768px) {
-    padding: 25px;
+    padding: 15px;
   }
 }
 
 .board-member-image {
   text-align: center;
-  margin-bottom: 25px;
-  position: relative;
+  margin-bottom: 20px;
 
   img {
-    max-width: 160px;
-    width: 160px;
-    height: 160px;
+    max-width: 140px;
+    width: 100%;
+    height: 140px;
     object-fit: cover;
     border-radius: 50%;
-    border: 4px solid $light-bg;
-    box-shadow: 0 4px 10px rgba(44, 52, 36, 0.15);
+    border: 3px solid $light-border;
     transition: all 0.3s ease;
   }
 
   .board-member-card:hover & img {
-    box-shadow: 0 8px 20px rgba(44, 52, 36, 0.2);
-    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   }
 
   .uk-placeholder {
-    width: 160px;
-    height: 160px;
+    width: 140px;
+    height: 140px;
     margin: 0 auto;
-    background: linear-gradient(135deg, $primary-color 0%, $accent-dark 100%);
+    background-color: $accent-dark;
     color: $text-light;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-weight: bold;
-    box-shadow: 0 4px 10px rgba(44, 52, 36, 0.15);
+    border: 3px solid $light-border;
   }
 }
 
@@ -381,103 +265,69 @@ $text-light: #f3f0e8;
 
   h4 {
     font-family: 'Playfair Display', serif;
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     font-weight: 700;
     color: $primary-color;
-    margin: 0 0 0.5rem 0;
-    line-height: 1.3;
+    margin: 0 0 0.3rem 0;
+    line-height: 1.2;
   }
 
   .board-member-title {
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     font-weight: 600;
     color: $accent-dark;
-    margin: 0 0 1.2rem 0;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+    margin: 0 0 0.8rem 0;
   }
 
   .board-member-bio {
-    font-size: 0.9rem;
-    line-height: 1.7;
-    color: #555;
-    margin: 0 0 1.5rem 0;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: #333;
+    margin: 0 0 1rem 0;
   }
 }
 
 .board-member-links {
   display: flex;
-  gap: 1.2rem;
-  padding-top: 1rem;
+  gap: 0.8rem;
+  padding-top: 0.8rem;
   border-top: 1px solid $light-border;
 
   .uk-icon-link {
-    color: $primary-color;
-    font-size: 1.3rem;
+    color: $accent-dark;
+    font-size: 1rem;
     text-decoration: none;
     transition: all 0.3s ease;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background-color: $light-bg;
 
     &:hover {
-      color: $text-light;
-      background-color: $accent-dark;
-      transform: scale(1.1);
+      color: $primary-color;
     }
   }
 }
 
-/* Utilities */
-.page-navbar {
-  background-color: rgba(255, 255, 255, 0.98);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+/* Section Headers */
+.uk-heading-medium {
+  color: $accent-dark !important;
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 700;
 
-.navbar {
-  a {
-    color: $primary-color !important;
-    font-weight: 500;
-
-    &:hover {
-      color: $accent-dark !important;
-    }
+  @media (max-width: 768px) {
+    font-size: 1.5rem;
   }
 }
 
-/* Dark mode support */
-@media (prefers-color-scheme: dark) {
-  .donation-cta-panel,
-  .mission-card,
-  .value-card,
-  .board-member-card {
-    background-color: #242424;
-    color: #f3f0e8;
-    border-color: #3a3a3a;
+.uk-heading-small {
+  color: $accent-dark !important;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+}
 
-    h3,
-    h4 {
-      color: #f3f0e8;
-    }
+/* Section Styling */
+.uk-section {
+  background-color: #fff;
+}
 
-    p {
-      color: #c9c9c9;
-    }
-  }
-
-  .page-navbar {
-    background-color: rgba(36, 36, 36, 0.98);
-  }
-
-  .uk-background-secondary {
-    background-color: #1a1a1a;
-  }
-
-  .board-member-card {
-    background-color: #242424;
-  }
+.uk-background-secondary {
+  background-color: $light-bg;
 }
