@@ -1,4 +1,8 @@
-<div class="uk-container uk-container-expand">
+<!-- Router outlet for displaying routed components -->
+<router-outlet></router-outlet>
+
+<!-- Home page content (displays when on home route) -->
+<div *ngIf="isHome" class="uk-container uk-container-expand">
   <div class="uk-position-top">
     <nav
       class="uk-navbar-container uk-navbar-transparent page-navbar"
@@ -35,6 +39,7 @@
             <li class="uk-parent"><a href="#admissions">Tuition & Fees</a></li>
             <li class="uk-parent"><a href="#team">Team</a></li>
             <li class="uk-parent"><a href="#contact">Contact</a></li>
+            <li class="uk-parent"><a routerLink="/donate">Friends of RG</a></li>
           </ul>
         </div>
         <div class="uk-navbar-center-right navbar-mobile">
@@ -66,6 +71,7 @@
           <li class="uk-parent"><a href="#admissions">Tuition & Fees</a></li>
           <li class="uk-parent"><a href="#team">Team</a></li>
           <li class="uk-parent"><a href="#contact">Contact</a></li>
+          <li class="uk-parent"><a routerLink="/donate">Friends of RG</a></li>
         </ul>
       </div>
     </div>

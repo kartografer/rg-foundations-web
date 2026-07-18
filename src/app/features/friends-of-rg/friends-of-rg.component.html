@@ -1,0 +1,199 @@
+<div class="uk-container uk-container-expand">
+  <!-- Navigation Back to Main Site -->
+  <div class="uk-position-top">
+    <nav
+      class="uk-navbar-container uk-navbar-transparent page-navbar"
+      uk-navbar
+    >
+      <div class="uk-navbar-center">
+        <div class="uk-navbar-item uk-logo uk-padding-small">
+          <a routerLink="/">
+            <svg width="150" height="150" viewBox="0 0 150 150">
+              <defs>
+                <mask id="circle-mask">
+                  <rect width="150" height="150" fill="black" />
+                  <circle cx="75" cy="75" r="75" fill="white" />
+                </mask>
+              </defs>
+              <g mask="url(#circle-mask)">
+                <image
+                  href="assets/img/rgfoundationslogo.svg"
+                  x="-75"
+                  y="-75"
+                  width="300"
+                  height="300"
+                />
+              </g>
+            </svg>
+          </a>
+        </div>
+        <div class="uk-navbar-right navbar">
+          <ul class="uk-navbar-nav">
+            <li class="uk-parent">
+              <a routerLink="/">Back to RG Foundations</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>
+
+<!-- Hero Section -->
+<div
+  class="uk-section-large uk-background-cover donation-hero"
+  style="background: linear-gradient(135deg, #2c3424 0%, #495662 100%)"
+>
+  <div class="uk-container">
+    <div class="uk-text-center uk-padding-large">
+      <h1 class="donation-hero-title">Friends of RG</h1>
+      <p class="donation-hero-subtitle">
+        Supporting Children on the Autism Spectrum
+      </p>
+      <p class="donation-hero-description">
+        A non-profit dedicated to providing financial aid and educational
+        support to children with autism
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Donation CTA Section -->
+<div class="uk-section donation-cta-section">
+  <div class="uk-container">
+    <div class="uk-panel donation-cta-panel">
+      <div class="uk-text-center">
+        <h2 class="donation-cta-title">Make a Difference</h2>
+        <p class="donation-cta-text">
+          Your gift helps us provide financial assistance, resources, and
+          support to children on the autism spectrum, ensuring they have access
+          to quality education and opportunities for success.
+        </p>
+        <div class="uk-margin-top">
+          <a
+            [href]="donationUrl"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="uk-button uk-button-primary donation-button"
+          >
+            Donate Now
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Mission/Vision/Values Section -->
+<div class="uk-section">
+  <div class="uk-container">
+    <h2 class="uk-heading-medium uk-text-center uk-margin-bottom">
+      Why Support Friends of RG?
+    </h2>
+
+    <!-- Mission & Vision -->
+    <div class="uk-grid uk-grid-match uk-margin-bottom" uk-grid>
+      <div class="uk-width-1-2@m">
+        <div class="mission-card">
+          <h3>Our Mission</h3>
+          <p>{{ missionStatement }}</p>
+        </div>
+      </div>
+      <div class="uk-width-1-2@m">
+        <div class="mission-card">
+          <h3>Our Vision</h3>
+          <p>{{ visionStatement }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Core Values -->
+    <h3 class="uk-heading-small uk-text-center uk-margin-top-large">
+      Our Core Values
+    </h3>
+    <div class="uk-grid uk-grid-match uk-margin-bottom" uk-grid>
+      <div
+        *ngFor="let value of coreValues"
+        class="uk-width-1-3@m uk-width-1-1@s"
+      >
+        <div class="value-card">
+          <div class="value-icon" *ngIf="value.icon">
+            <i [ngClass]="value.icon"></i>
+          </div>
+          <h4>{{ value.title }}</h4>
+          <p>{{ value.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Board Members Section -->
+<div class="uk-section uk-background-secondary">
+  <div class="uk-container">
+    <h2 class="uk-heading-medium uk-text-center uk-margin-bottom">
+      Friends of RG Board
+    </h2>
+
+    <div class="uk-grid uk-grid-match" uk-grid>
+      <div
+        *ngFor="let member of boardMembers"
+        class="uk-width-1-2@m uk-width-1-1@s"
+      >
+        <div class="board-member-card">
+          <div class="board-member-image">
+            <img
+              *ngIf="member.imagePath"
+              [src]="member.imagePath"
+              [alt]="member.firstName + ' ' + member.lastName"
+              class="uk-border-circle"
+            />
+            <div *ngIf="!member.imagePath" class="uk-placeholder">
+              <span>{{ member.firstName[0] }}{{ member.lastName[0] }}</span>
+            </div>
+          </div>
+          <div class="board-member-info">
+            <h4>{{ member.firstName }} {{ member.lastName }}</h4>
+            <p class="board-member-title">{{ member.title }}</p>
+            <p class="board-member-bio">{{ member.bio }}</p>
+            <div class="board-member-links">
+              <a
+                *ngIf="member.linkedinUrl"
+                [href]="member.linkedinUrl"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="uk-icon-link"
+              >
+                <i class="fab fa-linkedin"></i>
+              </a>
+              <a
+                *ngIf="member.email"
+                [href]="'mailto:' + member.email"
+                class="uk-icon-link"
+              >
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="boardMembers.length === 0" class="uk-text-center uk-margin-top">
+      <p class="uk-text-muted">Board members information coming soon.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="uk-section uk-section-small">
+  <div class="uk-container uk-text-center">
+    <p class="uk-text-small uk-margin-remove">
+      Friends of RG is a non-profit organization dedicated to supporting
+      children on the autism spectrum.
+    </p>
+    <p class="uk-text-small uk-text-muted">
+      <a routerLink="/">Back to RG Foundations</a>
+    </p>
+  </div>
+</div>

@@ -8,5 +8,8 @@ export const environment = {
     appId: '1:194429249947:web:6a6eb034140cd6302a193e',
     measurementId: 'G-78X6TM7B69',
   },
+  donation: {
+    externalPlatformUrl: 'https://donate.example.com/friends-of-rg', // Update with actual donation platform URL
+  },
   production: true,
 }
