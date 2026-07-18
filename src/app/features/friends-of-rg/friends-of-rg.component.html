@@ -1,5 +1,5 @@
 <div class="uk-container uk-container-expand">
-  <!-- Navigation Back to Main Site -->
+  <!-- Shared Navigation -->
   <div class="uk-position-top">
     <nav
       class="uk-navbar-container uk-navbar-transparent page-navbar"
@@ -30,12 +30,64 @@
         <div class="uk-navbar-right navbar">
           <ul class="uk-navbar-nav">
             <li class="uk-parent">
-              <a routerLink="/">Back to RG Foundations</a>
+              <a routerLink="/" fragment="about">About</a>
             </li>
+            <li class="uk-parent">
+              <a routerLink="/" fragment="academics">Academics</a>
+            </li>
+            <li class="uk-parent">
+              <a routerLink="/" fragment="admissions">Tuition & Fees</a>
+            </li>
+            <li class="uk-parent">
+              <a routerLink="/" fragment="team">Team</a>
+            </li>
+            <li class="uk-parent">
+              <a routerLink="/" fragment="contact">Contact</a>
+            </li>
+            <li class="uk-parent"><a routerLink="/donate">Friends of RG</a></li>
           </ul>
+        </div>
+        <div class="uk-navbar-center-right navbar-mobile">
+          <a
+            class="uk-navbar-toggle"
+            uk-navbar-toggle-icon
+            uk-toggle
+            href="#offcanvas-slide"
+            aria-label="Toggle navigation menu"
+          >
+            <span class="uk-hidden">Menu</span>
+          </a>
         </div>
       </div>
     </nav>
+    <div id="offcanvas-slide" uk-offcanvas>
+      <div class="uk-offcanvas-bar">
+        <button
+          class="uk-offcanvas-close"
+          type="button"
+          uk-close
+          aria-label="Close menu"
+        >
+          <span class="uk-hidden">Close</span>
+        </button>
+        <ul class="uk-nav uk-nav-default">
+          <li class="uk-parent">
+            <a routerLink="/" fragment="about">About</a>
+          </li>
+          <li class="uk-parent">
+            <a routerLink="/" fragment="academics">Academics</a>
+          </li>
+          <li class="uk-parent">
+            <a routerLink="/" fragment="admissions">Tuition & Fees</a>
+          </li>
+          <li class="uk-parent"><a routerLink="/" fragment="team">Team</a></li>
+          <li class="uk-parent">
+            <a routerLink="/" fragment="contact">Contact</a>
+          </li>
+          <li class="uk-parent"><a routerLink="/donate">Friends of RG</a></li>
+        </ul>
+      </div>
+    </div>
   </div>
 </div>
 
