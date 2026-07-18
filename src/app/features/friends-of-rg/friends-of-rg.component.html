@@ -238,14 +238,51 @@
 </div>
 
 <!-- Footer -->
-<div class="uk-section uk-section-small">
-  <div class="uk-container uk-text-center">
-    <p class="uk-text-small uk-margin-remove">
-      Friends of RG is a non-profit organization dedicated to supporting
-      children on the autism spectrum.
-    </p>
-    <p class="uk-text-small uk-text-muted">
-      <a routerLink="/">Back to RG Foundations</a>
-    </p>
+<div class="uk-section footer">
+  <div class="uk-container footer-content">
+    <footer class="uk-text-center">
+      <svg width="150" height="150" viewBox="0 0 150 150">
+        <defs>
+          <mask id="circle-mask-footer">
+            <rect width="150" height="150" fill="black" />
+            <circle cx="75" cy="75" r="75" fill="white" />
+          </mask>
+        </defs>
+        <g mask="url(#circle-mask-footer)">
+          <image
+            href="assets/img/rgfoundationslogo.svg"
+            x="-75"
+            y="-75"
+            width="300"
+            height="300"
+          />
+        </g>
+      </svg>
+      <address>
+        <p>
+          <i class="fas fa-envelope-open-text"></i>
+          Email:
+          <a href="mailto:info@rgfoundations.com?subject=Friends of RG Inquiry"
+            >info&#64;rgfoundations.com</a
+          >
+          <br />
+          <i class="fas fa-phone"></i>
+          Phone:
+          <a href="tel:305-586-2953">(305) 586-2953</a>
+        </p>
+        <p>
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=7000+SW+62nd+Ave+STE+407,+South+Miami,+FL+33143"
+            target="_blank"
+            >7000 SW 62nd Ave STE 407<br />
+            South Miami, FL 33143</a
+          >
+        </p>
+        <p>
+          <i class="fas fa-copyright"></i>
+          THE FRIENDS OF RG FOUNDATIONS, INC.
+        </p>
+      </address>
+    </footer>
   </div>
 </div>
