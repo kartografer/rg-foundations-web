@@ -1,5 +1,6 @@
-import { Component } from '@angular/core'
+import { Component, OnInit, inject } from '@angular/core'
 import { CommonModule } from '@angular/common'
+import { Title, Meta } from '@angular/platform-browser'
 import { environment } from '../../../environments/environment'
 
 export interface BoardMember {
@@ -27,8 +28,83 @@ export interface OrganizationValue {
   standalone: true,
   imports: [CommonModule],
 })
-export class FriendsOfRgComponent {
+export class FriendsOfRgComponent implements OnInit {
+  private titleService = inject(Title)
+  private metaService = inject(Meta)
+
   donationUrl = environment.donation?.externalPlatformUrl || '#'
+
+  ngOnInit() {
+    this.setMetaTags()
+  }
+
+  private setMetaTags() {
+    // Set page title
+    this.titleService.setTitle(
+      'Friends of RG - Support Children on the Autism Spectrum | Donate'
+    )
+
+    // Remove existing meta tags and add new ones
+    this.metaService.removeTag('name="description"')
+    this.metaService.addTag({
+      name: 'description',
+      content:
+        'Friends of RG Foundations provides financial aid and educational support to children on the autism spectrum. Donate today to make a difference in their lives.',
+    })
+
+    // Open Graph tags for social sharing
+    this.metaService.removeTag('property="og:title"')
+    this.metaService.addTag({
+      property: 'og:title',
+      content: 'Friends of RG - Support Children on the Autism Spectrum',
+    })
+
+    this.metaService.removeTag('property="og:description"')
+    this.metaService.addTag({
+      property: 'og:description',
+      content:
+        'THE FRIENDS OF RG FOUNDATIONS, INC. is dedicated to empowering children on the autism spectrum through financial aid and educational support.',
+    })
+
+    this.metaService.removeTag('property="og:type"')
+    this.metaService.addTag({
+      property: 'og:type',
+      content: 'website',
+    })
+
+    this.metaService.removeTag('property="og:url"')
+    this.metaService.addTag({
+      property: 'og:url',
+      content: window.location.href,
+    })
+
+    // Twitter Card tags
+    this.metaService.removeTag('name="twitter:card"')
+    this.metaService.addTag({
+      name: 'twitter:card',
+      content: 'summary_large_image',
+    })
+
+    this.metaService.removeTag('name="twitter:title"')
+    this.metaService.addTag({
+      name: 'twitter:title',
+      content: 'Friends of RG - Support Children on the Autism Spectrum',
+    })
+
+    this.metaService.removeTag('name="twitter:description"')
+    this.metaService.addTag({
+      name: 'twitter:description',
+      content:
+        'Donate to Friends of RG Foundations and support children on the autism spectrum with financial aid and educational resources.',
+    })
+
+    // Canonical URL
+    this.metaService.removeTag('rel="canonical"')
+    const link = document.createElement('link')
+    link.setAttribute('rel', 'canonical')
+    link.setAttribute('href', window.location.href)
+    document.head.appendChild(link)
+  }
 
   boardMembers: BoardMember[] = [
     {
