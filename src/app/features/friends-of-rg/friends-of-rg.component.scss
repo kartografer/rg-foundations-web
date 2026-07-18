@@ -1,0 +1,483 @@
+// Friends of RG Component Styles
+// Using existing RG Foundations color palette
+
+$primary-color: #2c3424;
+$accent-dark: #495662;
+$accent-med: #6a7187;
+$light-bg: #f3f0e8;
+$light-border: #daded8;
+$text-light: #f3f0e8;
+
+/* Hero Section */
+.donation-hero {
+  padding-top: 120px;
+  min-height: 550px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $text-light;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(
+      circle at 20% 50%,
+      rgba(255, 255, 255, 0.1) 0%,
+      transparent 50%
+    );
+    pointer-events: none;
+  }
+
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  @media (max-width: 768px) {
+    padding-top: 100px;
+    min-height: 400px;
+  }
+}
+
+.donation-hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.8rem;
+  font-weight: 700;
+  color: $text-light;
+  margin: 0 0 1rem 0;
+  letter-spacing: -0.5px;
+  text-wrap: balance;
+
+  @media (max-width: 768px) {
+    font-size: 2.5rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 2rem;
+  }
+}
+
+.donation-hero-subtitle {
+  font-size: 1.6rem;
+  color: $light-bg;
+  margin: 0 0 1.5rem 0;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+  }
+}
+
+.donation-hero-description {
+  font-size: 1.1rem;
+  color: $light-bg;
+  max-width: 650px;
+  margin: 0 auto;
+  line-height: 1.9;
+  letter-spacing: 0.3px;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
+}
+
+/* Donation CTA Section */
+.donation-cta-section {
+  background: linear-gradient(to bottom, #fff 0%, $light-bg 100%);
+  padding: 70px 0;
+
+  @media (max-width: 768px) {
+    padding: 50px 0;
+  }
+}
+
+.donation-cta-panel {
+  background-color: #fff;
+  border: 2px solid $light-border;
+  border-top: 6px solid $primary-color;
+  padding: 50px 40px;
+  text-align: center;
+  border-radius: 2px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  }
+
+  @media (max-width: 768px) {
+    padding: 40px 30px;
+  }
+}
+
+.donation-cta-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: $primary-color;
+  margin-bottom: 1.2rem;
+  letter-spacing: -0.3px;
+  text-wrap: balance;
+
+  @media (max-width: 768px) {
+    font-size: 2.2rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.8rem;
+  }
+}
+
+.donation-cta-text {
+  font-size: 1.05rem;
+  color: #555;
+  max-width: 650px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.9;
+  letter-spacing: 0.2px;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.donation-button {
+  background-color: $primary-color !important;
+  border-color: $primary-color !important;
+  color: $text-light !important;
+  padding: 16px 50px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(44, 52, 36, 0.2);
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+  }
+
+  &:hover {
+    background-color: $accent-dark !important;
+    border-color: $accent-dark !important;
+    box-shadow: 0 6px 16px rgba(44, 52, 36, 0.3);
+    transform: translateY(-2px);
+
+    &::before {
+      width: 300px;
+      height: 300px;
+    }
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(44, 52, 36, 0.2);
+  }
+}
+
+/* Mission/Vision/Values Section */
+.mission-card {
+  background-color: $light-bg;
+  border: 2px solid $light-border;
+  border-left: 5px solid $accent-dark;
+  padding: 35px;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    border-left-color: $primary-color;
+    box-shadow: 0 2px 8px rgba(44, 52, 36, 0.1);
+  }
+
+  h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: $primary-color;
+    margin-bottom: 1.5rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: #333;
+    margin: 0;
+    flex-grow: 1;
+  }
+
+  @media (max-width: 768px) {
+    padding: 25px;
+  }
+}
+
+.value-card {
+  background-color: $light-bg;
+  border: 2px solid $light-border;
+  padding: 35px 25px;
+  text-align: center;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-color: $accent-dark;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover {
+    border-color: $accent-dark;
+    box-shadow: 0 4px 12px rgba(44, 52, 36, 0.15);
+    transform: translateY(-2px);
+
+    &::before {
+      transform: scaleX(1);
+    }
+  }
+
+  .value-icon {
+    font-size: 3.5rem;
+    color: $primary-color;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+
+    i {
+      width: 100%;
+      display: inline-block;
+    }
+  }
+
+  &:hover .value-icon {
+    color: $accent-dark;
+    font-size: 3.8rem;
+  }
+
+  h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: $primary-color;
+    margin: 0 0 1rem 0;
+    transition: color 0.3s ease;
+  }
+
+  &:hover h4 {
+    color: $accent-dark;
+  }
+
+  p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: #555;
+    margin: 0;
+    flex-grow: 1;
+  }
+
+  @media (max-width: 768px) {
+    padding: 25px 20px;
+  }
+}
+
+/* Board Members Section */
+.uk-background-secondary {
+  background-color: #fafafa;
+}
+
+.board-member-card {
+  background-color: #fff;
+  border: 2px solid $light-border;
+  border-left: 5px solid $primary-color;
+  padding: 30px;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+
+  &:hover {
+    border-left-color: $accent-dark;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+  }
+
+  @media (max-width: 768px) {
+    padding: 25px;
+  }
+}
+
+.board-member-image {
+  text-align: center;
+  margin-bottom: 25px;
+  position: relative;
+
+  img {
+    max-width: 160px;
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid $light-bg;
+    box-shadow: 0 4px 10px rgba(44, 52, 36, 0.15);
+    transition: all 0.3s ease;
+  }
+
+  .board-member-card:hover & img {
+    box-shadow: 0 8px 20px rgba(44, 52, 36, 0.2);
+    transform: scale(1.02);
+  }
+
+  .uk-placeholder {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto;
+    background: linear-gradient(135deg, $primary-color 0%, $accent-dark 100%);
+    color: $text-light;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 3.5rem;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(44, 52, 36, 0.15);
+  }
+}
+
+.board-member-info {
+  flex-grow: 1;
+
+  h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: $primary-color;
+    margin: 0 0 0.5rem 0;
+    line-height: 1.3;
+  }
+
+  .board-member-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: $accent-dark;
+    margin: 0 0 1.2rem 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .board-member-bio {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: #555;
+    margin: 0 0 1.5rem 0;
+  }
+}
+
+.board-member-links {
+  display: flex;
+  gap: 1.2rem;
+  padding-top: 1rem;
+  border-top: 1px solid $light-border;
+
+  .uk-icon-link {
+    color: $primary-color;
+    font-size: 1.3rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: $light-bg;
+
+    &:hover {
+      color: $text-light;
+      background-color: $accent-dark;
+      transform: scale(1.1);
+    }
+  }
+}
+
+/* Utilities */
+.page-navbar {
+  background-color: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+  a {
+    color: $primary-color !important;
+    font-weight: 500;
+
+    &:hover {
+      color: $accent-dark !important;
+    }
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .donation-cta-panel,
+  .mission-card,
+  .value-card,
+  .board-member-card {
+    background-color: #242424;
+    color: #f3f0e8;
+    border-color: #3a3a3a;
+
+    h3,
+    h4 {
+      color: #f3f0e8;
+    }
+
+    p {
+      color: #c9c9c9;
+    }
+  }
+
+  .page-navbar {
+    background-color: rgba(36, 36, 36, 0.98);
+  }
+
+  .uk-background-secondary {
+    background-color: #1a1a1a;
+  }
+
+  .board-member-card {
+    background-color: #242424;
+  }
+}
