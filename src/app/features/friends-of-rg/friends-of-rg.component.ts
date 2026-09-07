@@ -10,10 +10,6 @@ export interface BoardMember {
   lastName: string
   title: string
   role: string
-  bio: string
-  imagePath: string
-  email?: string
-  linkedinUrl?: string
 }
 
 export interface OrganizationValue {
@@ -159,9 +155,6 @@ export class FriendsOfRgComponent implements OnInit {
       lastName: 'Urbieta',
       title: 'President',
       role: 'President',
-      bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-      imagePath: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Natalie',
-      linkedinUrl: 'https://linkedin.com/in/natalieUrbieta',
     },
     {
       id: 'member-2',
@@ -169,9 +162,6 @@ export class FriendsOfRgComponent implements OnInit {
       lastName: 'Gutierrez',
       title: 'Secretary',
       role: 'Secretary',
-      bio: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.',
-      imagePath: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Anibal',
-      linkedinUrl: 'https://linkedin.com/in/anibalGutierrez',
     },
     {
       id: 'member-3',
@@ -179,9 +169,6 @@ export class FriendsOfRgComponent implements OnInit {
       lastName: 'Nankin',
       title: 'Treasurer',
       role: 'Treasurer',
-      bio: 'Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.',
-      imagePath: 'https://api.dicebear.com/7.x/avataaars/svg?seed=Max',
-      linkedinUrl: 'https://linkedin.com/in/maxNankin',
     },
   ]
 
