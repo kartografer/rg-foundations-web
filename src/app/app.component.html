@@ -11,30 +11,33 @@
       >
         <div class="uk-navbar-center">
           <div class="uk-navbar-item uk-logo uk-padding-small">
-            <svg width="150" height="150" viewBox="0 0 150 150">
-              <defs>
-                <mask id="circle-mask">
-                  <rect width="150" height="150" fill="black" />
-                  <circle cx="75" cy="75" r="75" fill="white" />
-                </mask>
-              </defs>
-              <g mask="url(#circle-mask)">
-                <!--
-                Adjust x, y, width, height, and transform to zoom and center as needed.
-                Increase width+height for zoom-in; use x/y to offset.
-              -->
-                <image
-                  href="assets/img/rgfoundationslogo.svg"
-                  x="-75"
-                  y="-75"
-                  width="300"
-                  height="300"
-                />
-              </g>
-            </svg>
+            <a routerLink="/">
+              <svg width="150" height="150" viewBox="0 0 150 150">
+                <defs>
+                  <mask id="circle-mask">
+                    <rect width="150" height="150" fill="black" />
+                    <circle cx="75" cy="75" r="75" fill="white" />
+                  </mask>
+                </defs>
+                <g mask="url(#circle-mask)">
+                  <!--
+                  Adjust x, y, width, height, and transform to zoom and center as needed.
+                  Increase width+height for zoom-in; use x/y to offset.
+                -->
+                  <image
+                    href="assets/img/rgfoundationslogo.svg"
+                    x="-75"
+                    y="-75"
+                    width="300"
+                    height="300"
+                  />
+                </g>
+              </svg>
+            </a>
           </div>
           <div class="uk-navbar-right navbar">
             <ul class="uk-navbar-nav">
+              <li class="uk-parent"><a routerLink="/">Home</a></li>
               <li class="uk-parent"><a href="#about">About</a></li>
               <li class="uk-parent"><a href="#academics">Academics</a></li>
               <li class="uk-parent">
