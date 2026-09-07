@@ -13,7 +13,7 @@ export const environment = {
     measurementId: 'G-78X6TM7B69',
   },
   donation: {
-    externalPlatformUrl: 'https://donate.example.com/friends-of-rg', // Update with actual donation platform URL
+    externalPlatformUrl: 'https://donate.example.com/friends-of-rg', // TODO: Update with actual Zeffy donation URL once configured. Accepts: checks, cash, and Zeffy payments
   },
   production: false,
 }
