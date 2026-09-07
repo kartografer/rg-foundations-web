@@ -1,5 +1,6 @@
 import { Component, OnInit, inject } from '@angular/core'
 import { CommonModule } from '@angular/common'
+import { RouterModule } from '@angular/router'
 import { Title, Meta } from '@angular/platform-browser'
 import { environment } from '../../../environments/environment'
 
@@ -26,7 +27,7 @@ export interface OrganizationValue {
   templateUrl: './friends-of-rg.component.html',
   styleUrls: ['./friends-of-rg.component.scss'],
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
 })
 export class FriendsOfRgComponent implements OnInit {
   private titleService = inject(Title)
