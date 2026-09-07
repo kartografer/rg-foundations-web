@@ -36,6 +36,7 @@ export class FriendsOfRgComponent implements OnInit {
 
   ngOnInit() {
     this.setMetaTags()
+    this.setJsonLdSchema()
   }
 
   private setMetaTags() {
@@ -49,7 +50,7 @@ export class FriendsOfRgComponent implements OnInit {
     this.metaService.addTag({
       name: 'description',
       content:
-        'Friends of RG Foundations provides financial aid and educational support to children on the autism spectrum. Donate today to make a difference in their lives.',
+        'Friends of RG Foundations provides financial aid, educational resources, and support to students with autism ages 5-12 in South Miami. Donate today to help them succeed.',
     })
 
     // Open Graph tags for social sharing
@@ -63,7 +64,7 @@ export class FriendsOfRgComponent implements OnInit {
     this.metaService.addTag({
       property: 'og:description',
       content:
-        'THE FRIENDS OF RG FOUNDATIONS, INC. is dedicated to empowering children on the autism spectrum through financial aid and educational support.',
+        'THE FRIENDS OF RG FOUNDATIONS, INC. provides financial aid for tuition, educational resources, classrooms, and playground support for students with autism ages 5-12.',
     })
 
     this.metaService.removeTag('property="og:type"')
@@ -95,7 +96,7 @@ export class FriendsOfRgComponent implements OnInit {
     this.metaService.addTag({
       name: 'twitter:description',
       content:
-        'Donate to Friends of RG Foundations and support children on the autism spectrum with financial aid and educational resources.',
+        'Support students with autism ages 5-12 in South Miami. Donate to Friends of RG Foundations for financial aid, educational resources, and classroom support.',
     })
 
     // Canonical URL
@@ -104,6 +105,50 @@ export class FriendsOfRgComponent implements OnInit {
     link.setAttribute('rel', 'canonical')
     link.setAttribute('href', window.location.href)
     document.head.appendChild(link)
+  }
+
+  private setJsonLdSchema() {
+    const jsonLd = {
+      '@context': 'https://schema.org',
+      '@type': 'NonprofitOrganization',
+      name: 'Friends of RG Foundations, Inc.',
+      url: window.location.origin + '/donate',
+      logo: window.location.origin + '/assets/img/rgfoundationslogo.svg',
+      description:
+        'Friends of RG Foundations provides financial aid, educational resources, and comprehensive support to students with autism ages 5-12 years old in the South Miami area.',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '7000 SW 62nd Ave Suite 407',
+        addressLocality: 'South Miami',
+        addressRegion: 'FL',
+        postalCode: '',
+        addressCountry: 'US',
+      },
+      telephone: '305-586-2953',
+      email: 'friendsofrgfoundations@gmail.com',
+      sameAs: ['https://www.instagram.com/rgfoundationslearning'],
+      foundingDate: '2026',
+      taxID: '41-2464922',
+      areaServed: 'South Miami, Florida',
+      knowsAbout: [
+        'Autism support',
+        'Educational resources',
+        'Financial aid for tuition',
+        'Classroom resources',
+        'Playground equipment',
+      ],
+      contactPoint: {
+        '@type': 'ContactPoint',
+        contactType: 'Customer Service',
+        telephone: '305-586-2953',
+        email: 'friendsofrgfoundations@gmail.com',
+      },
+    }
+
+    const script = document.createElement('script')
+    script.type = 'application/ld+json'
+    script.textContent = JSON.stringify(jsonLd)
+    document.head.appendChild(script)
   }
 
   boardMembers: BoardMember[] = [
