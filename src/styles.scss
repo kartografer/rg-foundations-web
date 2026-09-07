@@ -47,7 +47,8 @@ h6 {
 
 .uk-card-default .uk-card-title,
 .uk-card-default {
-  color: #daded8;
+  background-color: rgb(255, 255, 255);
+  box-shadow: none;
 }
 
 .uk-text-lead {
@@ -92,7 +93,6 @@ h6 {
 
 .uk-button-primary {
   background-color: #6a7187;
-  color: #fff;
   border: 1px solid transparent;
 }
 
@@ -133,6 +133,7 @@ h6 {
 .light-card-body {
   color: #2c3424;
   background-color: #f3f0e8;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .educational-grid .uk-card-header {
@@ -149,4 +150,5 @@ h6 {
 .dark-card-body {
   color: #2c3424;
   background-color: #daded8;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
