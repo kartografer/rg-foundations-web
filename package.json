@@ -21,7 +21,7 @@
     "@angular/forms": "^20.3.25",
     "@angular/platform-browser": "^20.3.25",
     "@angular/platform-browser-dynamic": "^20.3.25",
-    "@angular/router": "^20.3.25",
+    "@angular/router": "^20.3.33",
     "firebase": "^12.10.0",
     "rxjs": "^7.8.2",
     "tslib": "^2.0.0",
